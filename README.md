@@ -1,6 +1,6 @@
-# vakinha_burger_web
+# Vakinha Burger - Flutter Web
 
-A new Flutter project.
+Projeto criado no Dart Week 10 da Academia do Flutter, com a intenção de gerenciar um aplicativo de delivery, através de um sistema Web com acesso Admin.
 
 ## Getting Started
 
