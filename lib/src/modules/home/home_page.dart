@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import '../../core/ui/helpers/loader.dart';
 import '../../core/ui/helpers/message.dart';
-import '../../core/ui/helpers/size_extensions.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -25,16 +24,25 @@ class _HomePageState extends State<HomePage> with Loader, Messages {
           showError('Alguma coisa');
         },
       ),
-      body: Container(
-        color: Colors.white,
-        child: Container(
-          color: Colors.red,
-          width: context.percentWidth(.5),
-          height: context.percentHeight(.9),
-          child: Text(
-            context.screenWidth.toString(),
+      body: Column(
+        children: [
+          Padding(
+            padding: const EdgeInsets.all(20),
+            child: TextFormField(
+              decoration: const InputDecoration(
+                label: Text('Nome'),
+                hintText: 'Digite seu nome',
+                border: OutlineInputBorder(),
+              ),
+            ),
           ),
-        ),
+          const SizedBox(height: 20),
+          SizedBox(
+            width: 200,
+            height: 50,
+            child: ElevatedButton(onPressed: () {}, child: const Text('Botão')),
+          ),
+        ],
       ),
     );
   }
